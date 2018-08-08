@@ -1,7 +1,15 @@
-.rojo {
-  color: #ed5353;
+.brown {
+  color: #734d26;
 }
 
 .center {
   text-align: center;
+}
+
+.bodyBgrnd {
+	background: #336699
+}
+
+.negritas {
+  font-weight: bold;
 }
