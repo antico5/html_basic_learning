@@ -7,9 +7,26 @@
 }
 
 .bodyBgrnd {
-	background: #336699
+	background: skyblue
 }
 
 .negritas {
   font-weight: bold;
+}
+
+.sFooter {
+	text-align: center;
+}
+
+.sCabecera1 {
+	background: lightyellow;
+}
+
+.sTabla {
+	border: 1px solid black;
+}
+
+#tabla1 {
+	background: lightgreen;
+	margin: 0 auto;
 }
