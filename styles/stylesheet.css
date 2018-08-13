@@ -7,16 +7,9 @@
 }
 
 .bodyBgrnd {
-	background: skyblue
+	background: white;
 }
 
-.negritas {
-  font-weight: bold;
-}
-
-.sFooter {
-	text-align: center;
-}
 
 .sCabecera1 {
 	background: lightyellow;
@@ -29,4 +22,47 @@
 #tabla1 {
 	background: lightgreen;
 	margin: 0 auto;
+}
+
+.navBar {
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #31b0f9;
+}
+
+.itemNavBarVert {
+	display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none
+}
+
+.itemNavBarVert:hover {
+	background-color: #f74c77;
+    color: white;
+}
+
+.navBarHor {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.itemNavBarHor {
+	float: right;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+.itemNavBarHor:hover {
+	background-color: #111;
 }
