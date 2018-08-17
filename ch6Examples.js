@@ -12,14 +12,14 @@ class Rabbit {
 
   //geters & seters
 
-  getEdad() {return this.edad}
-  getColorPelo() {return this.colorPelo}
-  getPaisOrigen() {return this.paisOrigen}
-  getType() {return this.type}
+  get Edad() {return this.edad}
+  get ColorPelo() {return this.colorPelo}
+  get PaisOrigen() {return this.paisOrigen}
+  get Type() {return this.type}
 
-  setEdad(edad) {this.edad = edad}
-  setColorPelo(colorPelo) {this.colorPelo = colorPelo}
-  setPaisOrigen(paisOrigen) {this.paisOrigen = paisOrigen}
+  set Edad(edad) {this.edad = edad}
+  set ColorPelo(colorPelo) {this.colorPelo = colorPelo}
+  set PaisOrigen(paisOrigen) {this.paisOrigen = paisOrigen}
 
   //metodos
 
@@ -29,28 +29,28 @@ class Rabbit {
 let killerRabbit = new Rabbit("killer", 2, "Rojo", "Mexico")
 let blackRabbit = new Rabbit("black")
 
-/*console.log("Tipo de conejo: " + killerRabbit.getType() + 
-			"\nEdad: " + killerRabbit.getEdad() +  
-			"\nColor del pelo: " + killerRabbit.getColorPelo() + 
-			"\nPais de origen: " + killerRabbit.getPaisOrigen())
+console.log("Tipo de conejo: " + killerRabbit.Type + 
+			"\nEdad: " + killerRabbit.Edad +  
+			"\nColor del pelo: " + killerRabbit.ColorPelo + 
+			"\nPais de origen: " + killerRabbit.PaisOrigen)
 
-console.log("Tipo de conejo: " + blackRabbit.getType() + 
-			"\nEdad: " + blackRabbit.getEdad() +  
-			"\nColor del pelo: " + blackRabbit.getColorPelo() + 
-			"\nPais de origen: " + blackRabbit.getPaisOrigen())
+console.log("Tipo de conejo: " + blackRabbit.Type + 
+			"\nEdad: " + blackRabbit.Edad +  
+			"\nColor del pelo: " + blackRabbit.ColorPelo + 
+			"\nPais de origen: " + blackRabbit.PaisOrigen)
 
-blackRabbit.setEdad(4)
-blackRabbit.setColorPelo("Negro")
-blackRabbit.setPaisOrigen("EEUU")
+blackRabbit.Edad = 4
+blackRabbit.ColorPelo = "Negro"
+blackRabbit.PaisOrigen = "EEUU"
 
-console.log("Tipo de conejo: " + blackRabbit.getType() + 
-			"\nEdad: " + blackRabbit.getEdad() +  
-			"\nColor del pelo: " + blackRabbit.getColorPelo() + 
-			"\nPais de origen: " + blackRabbit.getPaisOrigen())
-*/
+console.log("Tipo de conejo: " + blackRabbit.Type + 
+			"\nEdad: " + blackRabbit.Edad +  
+			"\nColor del pelo: " + blackRabbit.ColorPelo + 
+			"\nPais de origen: " + blackRabbit.PaisOrigen)
+
 //matriz
 
-class Matrix {
+/*class Matrix {
 
   	constructor(width, height, element = 0) {
     this.width = width
@@ -116,4 +116,4 @@ matriz1.display()
 matriz2.display()
 
 let matriz3 = suma(matriz1, matriz2)
-matriz3.display()
+matriz3.display()*/
