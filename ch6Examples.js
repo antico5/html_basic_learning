@@ -9,9 +9,7 @@ class Rabbit {
     this.colorPelo = colorPelo
     this.paisOrigen = paisOrigen
   }
-
   //geters & seters
-
   get Edad() {return this.edad}
   get ColorPelo() {return this.colorPelo}
   get PaisOrigen() {return this.paisOrigen}
@@ -20,9 +18,7 @@ class Rabbit {
   set Edad(edad) {this.edad = edad}
   set ColorPelo(colorPelo) {this.colorPelo = colorPelo}
   set PaisOrigen(paisOrigen) {this.paisOrigen = paisOrigen}
-
   //metodos
-
   speak(line) {return "The " + this.type + " rabbit says " + line}
 }
 
@@ -48,32 +44,29 @@ console.log("Tipo de conejo: " + blackRabbit.Type +
 			"\nColor del pelo: " + blackRabbit.ColorPelo + 
 			"\nPais de origen: " + blackRabbit.PaisOrigen)
 
-//matriz
+//clase matriz
 
-/*class Matrix {
+class Matrix {
 
-  	constructor(width, height, element = 0) {
+  constructor(width, height, element = 0) {
     this.width = width
     this.height = height
     this.content = []
-
     for (let y = 0; y < height; y++) {
       for (let x = 0; x < width; x++) {
         this.content[y * width + x] = element
       }
     }
   }
+//geters & seters
+  get Width() { return this.width }
+  get Height() { return this.height }
+  get Content() {return this.content}
 
-  getWidth() { return this.width }
-  getHeight() { return this.height }
-
-  get(x, y) {
-    return this.content[y * this.width + x]
-  }
-  set(x, y, value) {
-    this.content[y * this.width + x] = value
-  }
-
+  set Content(c) { for(let i in c) this.content[i] = c[i]}
+//metodos
+  get(x, y) { return this.content[y * this.width + x] }
+  set(x, y, value) { this.content[y * this.width + x] = value }
   display() {
 
   	for (let y = 0; y < this.height; y++) {
@@ -84,12 +77,12 @@ console.log("Tipo de conejo: " + blackRabbit.Type +
     }
   }
 }
-
+//una opcion para la funcion suma, medio engorroso de leer ? 2 for anidados
 suma = (m1, m2) => {
 
   	if(sumables(m1, m2)) {
-  		let h = m1.getHeight()
-  		let w = m1.getWidth()
+  		let h = m1.Height
+  		let w = m1.Width
   		let matrizAux = new Matrix(w, h)
   		for (let y = 0; y < h; y++) {
       		for (let x = 0; x < w; x++) {
@@ -97,17 +90,32 @@ suma = (m1, m2) => {
         		matrizAux.set(x, y, e)
       		}
     	}
-
     	return matrizAux
   	}
   	else {
   		console.log("Matrices no sumables")
   		return new Matrix()
   	}
+}
+// otra opcion, mas legible
+suma2 = (m1, m2) => {
 
-  }
+    if(sumables(m1, m2)) {
+      let result = []
+      let matrizAux = new Matrix(m1.Width, m1.Height, 0)
+      for(let i in m1.Content) 
+        result.push(m1.Content[i] + m2.Content[i])
+      matrizAux.Content = result
+      return matrizAux
+    }
+    else {
+      console.log("Matrices no sumables")
+      return new Matrix()
+    }
+}
 
-sumables = (m1, m2) => { return m1.getHeight() == m2.getHeight() && m1.getWidth() == m2.getWidth() }
+ //son sumables si tienen misma n y m
+sumables = (m1, m2) => { return m1.Height == m2.Height && m1.Width == m2.Width }
 
 let matriz1 = new Matrix(4, 4, 2)
 let matriz2 = new Matrix(4, 4, 3)
@@ -116,4 +124,6 @@ matriz1.display()
 matriz2.display()
 
 let matriz3 = suma(matriz1, matriz2)
-matriz3.display()*/
+let matriz4 = suma2(matriz1, matriz3)
+matriz3.display()
+matriz4.display()
